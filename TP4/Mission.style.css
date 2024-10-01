@@ -1,0 +1,80 @@
+body {
+    background-color: lightcoral;
+}
+
+.Titre{
+border-radius: 10px;
+float: center;
+background-color: deeppink; 
+height: 40px;
+
+}
+
+.Introduction{
+    border-radius: 10px;
+    background-color: purple;
+    margin: 10px;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+
+.p1{
+    border-radius: 10px;
+    float: left;
+    background-color: deeppink;
+    margin: 10px;
+    height: 420px;
+    width: 30%;
+}
+
+.p2{
+    
+    border-radius: 10px;
+    float: left;
+    background-color: deeppink;
+    margin: 10px;
+    height: 420px;
+    width: 30%;
+
+}
+
+.critique{
+
+    border-radius: 10px;
+background-color: purple;
+    margin: 10px;
+    height: 30px;
+    width: 100%;
+    text-align: center;
+
+
+}
+.p3{
+    border-radius: 10px;
+    float: right;
+    background-color: deeppink;
+    margin: 10px;
+    height: 420px;
+    width: 30%;
+
+}
+
+footer{
+    border-radius: 10px;
+    float: center;
+    background-color: deeppink; 
+    height: 40px;
+    clear: both;
+    text-align: center;
+    
+
+
+}
+
+
+
+
+
+
