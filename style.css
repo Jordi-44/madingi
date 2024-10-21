@@ -116,6 +116,12 @@ nav>ul {
 
  }
  
+ nav label{
+   display: none;
+ }
 
+ nav input{
+   display: none;
+ }
 
 
