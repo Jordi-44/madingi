@@ -171,20 +171,58 @@ h2{
 
 
 
+.Premier{
+    border: 2px solid white;
+    border-radius: 40px;
+    margin: 30px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.4) ;
+
+}
+
+
+.douze{
+    border: 2px solid white;
+    border-radius: 40px;
+    margin: 30px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.4) ;
+
+}
 
 
 
 
+.SommeCarre{
+    border: 2px solid white;
+    border-radius: 40px;
+    margin: 30px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.4) ;
+
+}
 
 
 
 
+.Multiple{
+    border: 2px solid white;
+    border-radius: 40px;
+    margin: 30px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.4) ;
+
+}
 
 
+.ChC{
+    border: 2px solid white;
+    border-radius: 40px;
+    margin: 30px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.4) ;
 
-
-
-
+}
 
 
 
