@@ -244,14 +244,11 @@ function factorielle(n) {
 
 // Exercice 11 : Vérifier si un nombre est premier
 function verifierNombrePremier() {
-    // je déclare une fonction nombre premier dans laquelle je place un prompt n dans laquelle l'utilisateur devra tapr un nombre entier
     const n = parseInt(prompt("Entrez un nombre entier :"));
     if (isNaN(n) || n < 2) {
-        // un alert si l'utilisateur place de mauvaise donné par exemple 1
         alert("Veuillez entrer un entier supérieur ou égal à 2.");
         return;
     }
-    //
     const estPremier = n > 1 && Array.from({ length: n - 2 }, (_, i) => i + 2).every(x => n % x !== 0);
     alert(`Le nombre ${n} est ${estPremier ? "" : "non "}premier.`);
 }
@@ -277,7 +274,6 @@ function calculerMoyenne() {
         alert("Veuillez entrer uniquement des nombres.");
         return;
     }
-    //La variable somme va additionner et divise la somme par valeur.length 
     const somme = valeurs.reduce((a, b) => a + b, 0);
     const moyenne = somme / valeurs.length;
     alert(`La moyenne des nombres est : ${moyenne}`);
@@ -295,14 +291,11 @@ function moyenne(valeurs) {
 
 // Exercice 13 : Trouver la somme des carrés des nombres d’un tableau
 function sommeDesCarres() {
-    //je déclare la fonction sommeDesCarres dasn laquelle il ya un prompt qui indique a l'utilsateur de mettre des chiffres séparer par virule 
     const valeurs = prompt("Entrez des nombres séparés par des virgules :").split(",").map(Number);
-   //Un if si la valeur mise par l'utlisateur est contraire a des nombres 
     if (valeurs.some(isNaN)) {
         alert("Veuillez entrer uniquement des nombres.");
         return;
     }
-    //je déclare une variable dans laquelle chaque nombre est élver au carré puis ces carré sont additionnés
     const somme = valeurs.reduce((acc, val) => acc + val ** 2, 0);
     alert(`La somme des carrés est : ${somme}`);
 }
@@ -319,7 +312,6 @@ function sommeCarres(valeurs) {
 
 // Exercice 14 : Afficher les multiples de 3 entre 1 et 100
 function afficherMultiplesDeTrois() {
-    // je déclare une variable un tableau javascript avec les nombres de 1 a 100 puis le filter va servir a diviser les chiffre nombre divisible par 3
     const multiples = Array.from({ length: 100 }, (_, i) => i + 1).filter(x => x % 3 === 0).join(", ");
     alert(`Les multiples de 3 entre 1 et 100 sont : ${multiples}`);
 }
@@ -336,14 +328,11 @@ function multiplesDeTrois() {
 
 // Exercice 15 : Inverser une chaîne de caractères
 function inverserChaine() {
-    //je déclare une fonction InverserChaine ou il y'aura un prompt dans laquelle l'utilisateur va rentrer une donné
     const chaine = prompt("Entrez une chaîne de caractères :");
     if (!chaine) {
-        //Une alerte si l'utilisateur rentre de mauvaise donné 
         alert("Veuillez entrer une chaîne valide.");
         return;
     }
-    // je déclare une variable inverse où la variable chaine. est renverser par split.reverse et convertie en chaine 
     const inverse = chaine.split("").reverse().join("");
     alert(`La chaîne inversée est : "${inverse}"`);
 }
