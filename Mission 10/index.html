@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="M10.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+      <!-- jordi Madingi -->
+    <title>Mission 10</title>
+</head>
+<body>
+    <header>
+        <div class="h1">
+                <!--Div pour la section facture avce le titre, la date et le n° de facture  -->
+            <h1>Facture</h1><br>
+            <p>06/12/2024</p>
+            <p>N° de facture</p>
+            
+         </div>
+        
+         <div class="text">
+              <!--Div qui contient le nom de la compagnie, l'adresse postale et le détail client-->
+            <h3>Nom de la compagnie</h3>
+            <p>Adresse postale</p> <br>
+            <p>Détail du contact</p>
+        </div>
+    </header>
+    
+    <main>
+        
+        <div class="destinataire">  
+            <!--Div qui contient le nom , le nom de la société,l'adresse postale,le téléphone et l'email-->
+            <h3>Destinataire</h3> 
+                    <ul>
+                        <li>Nom</li>
+                        <li>Nom de la société</li>
+                        <li>Adresse postale</li>
+                        <li>Téléphone</li>
+                        <li>Email</li>
+                    </ul>
+        </div>
+
+        <div class="envoyer">
+                <!--Div qui est un copié coller de la div destinataire-->
+            <h3>Envoyez à</h3>  
+                <ul>
+                    <li>Nom</li>
+                    <li>Nom de la société</li>
+                    <li>Adresse postale</li>
+                    <li>Téléphone</li>
+                    <li>Email</li>
+                </ul>
+        </div>
+
+        <div class="tableaux">
+            <!--Div qui contient tout le tableau -->
+            <table id="table_inv" >
+            <thead>
+            <!--Dans la ballise thead je met toute mon texte qui sera a l'entete du tableau -->
+                <tr>
+                <th>DESCRIPTION</th>
+                <th>QUANTITE</th>
+                <th>PRIX UNITAIRE</th>
+                <th>TOTAL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>  
+                    <!--Dans la ballise tbody y'aure le corp du tableau avec dans les balise "td" des input type text qui ont des class pour les cibler en css et des name pour le javascript  -->
+                    <td><input type="text" name="desc" class="desc" value="desc1"></td>
+                    <td><input type="text" name="qte" class="qte" value="0"></td>
+                    <td><input type="text" name="prix" class="prix" value="0"></td>
+                    <td><input type="text" name="total" class="total" readonly="readonly" value="0.00"></td>
+
+                </tr>
+                <tr>
+                    <td><input type="text" name="desc" class="desc" value="desc2"></td>
+                    <td><input type="text" name="qte" class="qte" value="0"></td>
+                    <td><input type="text" name="prix" class="prix" value="0"></td>
+                    <td><input type="text" name="total" class="total" readonly="readonly" value="0.00"></td>
+                </tr>
+
+                <tr class="row" id="modeleLigne">
+                    <td><input type="text" name="desc" class="desc" value="desc3"></td>
+                    <td><input type="text" name="qte" class="qte" value="0"></td>
+                    <td><input type="text" name="prix" class="prix" value="0"></td>
+                    <td><input type="text" name="total" class="total" readonly="readonly" value="0.00"></td>
+                </tr>
+
+                <tr class="row lastrow" id="Lastligne">
+                    <td><input type="text" name="desc" class="desc" value="desc4"></td>
+                    <td><input type="text" name="desc" class="qte" value="0"></td>
+                    <td><input type="text" name="desc" class="prix" value="0"></td>
+                    <td><input type="text" name="desc" class="total" readonly="readonly" value="0.00"></td>
+                </tr>
+                
+            </tbody>
+            </table>
+
+    </main>
+    
+    <nav>
+        <div class="remarque">
+             <p>Remarques,<br>
+                notes <br>
+                et instruction de paiement</p>
+                
+        </div>
+
+            
+        <div class="solde">
+        <!--Div solde qui contient un tableaux dans laquelle des balise td contiennent le nom et un input qui va permettre de mettre des données de types nombre-->
+        <table>
+            <tr>
+                <td>SOUS-TOTAL</td>
+                <td class="align-right"><input class="right" type="number" id="sousTotal" value="0" step="0.01"></td>
+            </tr>
+            <tr>
+                <td>REMISE</td>
+                <td class="align-right"><input class="right" type="number" id="remise" value="10" step="0.01"></td>
+            </tr>
+            <tr>
+                <td>SOUS-TOTAL MOINS LES REMISES</td>
+                <td class="align-right" id="apresRemise">0.00</td>
+            </tr>
+            <tr>
+                <td>TAUX D'IMPOSITION</td>
+                <td class="align-right"><input class="right" type="number" id="tauxImposition" value="10" step="0.01"> %</td>
+            </tr>
+            <tr>
+                <td>TAXE TOTALE</td>
+                <td class="align-right" id="taxeTotale">0.00</td>
+            </tr>
+            <tr>
+                <td>EXPÉDITION, MANUTENTION</td>
+                <td class="align-right"><input class="right"  type="number" id="expedition" value="5" step="0.01"></td>
+            </tr>
+            <tr>
+                <td><strong>SOLDE DÛ</strong></td>
+                <td class="align-right solde-due" id="soldeDu">0.00€</td>
+            </tr>
+        </table>
+      
+        </div>
+
+            
+            <button onclick="Total()">Calculer</button>
+            <button onclick="ajouterLigne()">Ajouter une ligne</button>
+            <button>Remplir automatiquement</button>
+            <button onclick="annuller()">Annuler</button>
+
+    </nav>
+
+
+    <footer>
+        <a href="../index.html"><h2>Portefolio</h2></a>
+    </footer>
+</body>
+</html>
