@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3eaff;
+
+}
+
+/*index*/
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+}
+
+
+.right{
+    margin-left: 10px;
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(#eeaeca, #b994e9);
+    height: 360px;
+    border-radius: 50px;
+    width: 700px;
+ 
+}
+
+.left{
+    text-align: center;
+}
+
+.pic{
+    margin-top: 40px;
+    height: 500px;
+    width: 600px;
+    border-radius: 50%;
+   
+}
+
+
+input{
+    border: none;
+    background-color: white;
+    border-radius: 20px;
+    width: 90%;
+    height: 30px;
+    margin-right: 50px;
+   
+}
+
+label{
+    text-align: left;
+    font-weight: 200;
+
+}
+
+.signup{
+    font-weight: 200;
+}
+
+
+
+button {
+    width: 50%;
+    padding: 10px;
+    margin-top: 40px;
+    margin-left: 190px;
+    border: none;
+    background-color: white;
+     border-radius: 5px;
+     text-align: left;
+     font-size: 14px;
+     cursor: pointer;
+     display: flex;
+      align-items: center;
+     justify-content: center;
+       gap: 10px;
+      border-radius: 20px;
+  
+  }
+
+button:hover { 
+   background-color: #eeaeca;
+    color: white;
+  }
